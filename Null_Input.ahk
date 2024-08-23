@@ -21,6 +21,8 @@ KeyPressed(key, keysPressed){
 	if (FindKey(key, keysPressed) > 0){	;	the key has already been pressed, hotkey shitness
 		return
 	}
+	Sleep(Random(10, 40))	;	for cs2, avoids getting detected by anticheat
+	
 	ClearKeys(keysPressed)
 	keysPressed.Push(key)
 	SendKey(key)
